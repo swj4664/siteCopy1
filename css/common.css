@@ -2,27 +2,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 /* font-family: 'Noto Sans KR', sans-serif; */
 
+.wrap { border-top: 4px solid #76a34e;}
 
 /* 헤더 구역 */
 .headWrap { max-width: 1140px; margin: 0 auto; padding: 16px; }
 .headWrap .header { position: relative; margin: 0 auto;  height: 88px;}
-.headWrap .header .nav { position: absolute; width: 100%; padding: 0 10px; margin: 0 auto; top: 50%; left: 0; transform: translateY(-50%);}
+.headWrap .header .nav { position: absolute; width: 100%; padding: 0 10px; margin: 0 auto; top: 50%; left: 0; transform: translateY(-50%); }
 .headWrap .header .nav .nav_left { display: inline-block; width:29%; text-align: left; vertical-align: middle;}
 .headWrap .header .nav .nav_left .logo {font-size: 36px; font-weight: bold;}
 
 .headWrap .header .nav .nav_center { display: inline-block; width:49%; font-size: 13px;}
 .headWrap .header .nav .nav_center .depth1 {  display: inline-block;  text-align: center; }
 .headWrap .header .nav .depth1>li { position: relative;}
+.headWrap .header .nav .depth1>li span { color: #76a34e;}
 .headWrap .header .nav .depth1>li>a { display: block; padding: 8px 16px; }
 .headWrap .header .nav .depth1>li:hover .depth2 { display: block;}
 .headWrap .header .nav .depth2 { display: none; width: 150px; background-color: white; position: absolute; top: 100%; left: 0; text-align: left; box-shadow: 0px 0px 10px 0px rgba(86, 162, 79, 0.25);}
-.headWrap .header .nav .depth2 li a { display: block; padding: 8px 16px; }
+.headWrap .header .nav .depth2 li a { display: block; padding: 10px 16px; }
+.headWrap .header .nav .depth2 li:hover a { background-color: #dcf5ce;}
 
 .headWrap .header .nav .nav_right { display: inline-block; width:20%; text-align: right;}
-/* .headWrap .header .nav .nav_right .join { position: relative;} */
-.headWrap .header .nav .nav_right a { padding: 10px 24px; background-color: #76a34e; border-radius: 4px; color: white;}
+
+.headWrap .header .nav .nav_right a p { position: absolute;  border: 2px solid black; width: 32px; height: 16px; border-radius: 0 0 16px 16px; rotate: -45deg;}
+
+.headWrap .header .nav .nav_right a:nth-child(1) { position: relative; display: inline-block; width: 32px; height: 32px; background-color: #d1bc79; border-radius: 50%; color: white; font-size: 13px; vertical-align: middle; margin-right: 24px;}
+
+.headWrap .header .nav .nav_right a:nth-child(1):hover { border: 2px solid black; }
 
 
-/* 푸터 구역 */
-.tag { height: 45px; background-color: #5c5040;}
-.info { height: 110px; background-color: #453d32;}
+.headWrap .header .nav .nav_right a i { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+
+.headWrap .header .nav .nav_right a:nth-child(2) { padding: 10px 24px; background-color: #76a34e; border-radius: 4px; color: white; vertical-align: middle; transition: all .3s;}
+.headWrap .header .nav .nav_right a:nth-child(2):hover { background-color: #76bb4e; }
+
+
+
+/* 푸터 구역 */     
+.tag { position: relative; height: 45px; background-color: #5c5040; color: #938d84; font-size: 13px;}
+.tag .tag_group {  position: absolute; top:0; left: 50%; transform: translateX(-50%);}
+.tag .tag_group a { display: inline-block; padding: 10px 16px; }
+
+.info { position: relative; height: 110px; background-color: #453d32; color: #938d84; font-size: 13px; text-align: center;}
+.info .info_group { position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); padding: 24px 0;}
+.info .info_group address { margin-bottom: 10px;}
+.info .info_group p { display: inline-block; margin-bottom: 8px;}
+.info .info_group p a { color: #2271b1; transition: all .05s;}
+.info .info_group p a:hover { text-decoration:underline; color: #135e96;}
